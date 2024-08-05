@@ -1,11 +1,11 @@
 require('dotenv').config()
 const express=require('express');
-const serverless=require('serverless-http')
+// const serverless=require('serverless-http')
 const userModel = require('./models/user');
 const bcrypt = require('bcrypt');
 const path=require('path');
 const app = express();
-const router=express.Router();
+
 const PORT=process.env.PORT || 3000
 
 
@@ -16,7 +16,7 @@ app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, "public")));
 
-app.use('/.netlify/functions/app',router)
+
 
 
 
@@ -88,4 +88,4 @@ app.listen(PORT,(err)=>{
     }
     console.log(`server started at port ${PORT}`);
 })
-module.exports.handler=serverless(app)
+// module.exports.handler=serverless(app)
