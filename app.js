@@ -2,7 +2,7 @@ require('dotenv').config()
 const express=require('express');
 const serverless=require('serverless-http')
 const userModel = require('./models/user');
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 const path=require('path');
 const app = express();
 
