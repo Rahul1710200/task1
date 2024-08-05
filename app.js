@@ -1,8 +1,11 @@
+require('dotenv').config()
 const express=require('express');
 const userModel = require('./models/user');
 const bcrypt = require('bcrypt');
 const path=require('path');
 const app = express();
+
+const PORT=process.env.PORT || 3000
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
@@ -74,7 +77,7 @@ app.post('/create',async (req,res)=>{
     }
 
 })
-app.listen(3000,(err)=>{
+app.listen(PORT,(err)=>{
     if(err){
         console.log(err);
     }
