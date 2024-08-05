@@ -1,6 +1,6 @@
 require('dotenv').config()
 const express=require('express');
-// const serverless=require('serverless-http')
+const serverless=require('serverless-http')
 const userModel = require('./models/user');
 const bcrypt = require('bcrypt');
 const path=require('path');
@@ -88,4 +88,4 @@ app.listen(PORT,(err)=>{
     }
     console.log(`server started at port ${PORT}`);
 })
-// module.exports.handler=serverless(app)
+module.exports.handler=serverless(app)
