@@ -84,3 +84,6 @@ app.listen(PORT,(err)=>{
     }
     console.log(`server started at port ${PORT}`);
 })
+
+// module.exports.handler=serverless(app)
+
