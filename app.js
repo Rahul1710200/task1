@@ -1,24 +1,20 @@
 require('dotenv').config()
 const express=require('express');
-const serverless=require('serverless-http')
+
+// const link ="https://task1-1-mied.onrender.com"
+
 const userModel = require('./models/user');
-const bcrypt = require('bcrypt');
+// const bcrypt = require('bcrypt');
 const path=require('path');
 const app = express();
 
 const PORT=process.env.PORT || 3000
-
-
 
 app.use(express.json());
 app.use(express.urlencoded({extended:true}))
 app.set('view engine', 'ejs');
 
 app.use(express.static(path.join(__dirname, "public")));
-
-
-
-
 
 
 app.get('/',(req,res)=>{
@@ -88,4 +84,3 @@ app.listen(PORT,(err)=>{
     }
     console.log(`server started at port ${PORT}`);
 })
-module.exports.handler=serverless(app)
