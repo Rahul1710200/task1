@@ -9,39 +9,49 @@
 </head>
 
 <body>
-    <div class="p-[3vw] w-full min-h-screen bg-zinc-900 text-white">
-        <div class="text-xl mb-[1vw] text-blue-500 w-[9vw] px-3 py-2 rounded-lg">
+    <div class="p-[2vw] w-full min-h-screen bg-zinc-900 text-white">
+        <div class="text-lg mb-[0.5vw] text-blue-500 w-[15vw] px-2 py-1 rounded-lg">
             <a href="/">Back to home</a>
         </div>
 
-        <h1 class="text-[2vw] tracking-tighter mb-3">All Users</h1>
-        <div class="Users flex gap-4 flex-wrap">
+        <h1 class="text-[1.5vw] tracking-tighter mb-2">All Users</h1>
+        <div class="Users flex gap-3 flex-wrap">
             <% users.forEach((user)=> { %>
-                <div class="user w-[20vw] p-4 bg-zinc-800 rounded-lg flex flex-col">
+                <div class="user w-[18vw] p-3 bg-zinc-800 rounded-lg flex flex-col">
                     <div class="flex flex-col gap-1">
-                        <div class="  text-xl"><span class="text-yellow-500">First Name: </span> <%= user.firstName %>
+                        <div class="text-lg"><span class="text-yellow-500">First Name: </span>
+                            <%= user.firstName %>
                         </div>
-                        <div class="text-xl"><span class="text-yellow-500">Last Name: </span> <%= user.lastName %>
+                        <div class="text-lg"><span class="text-yellow-500">Last Name: </span>
+                            <%= user.lastName %>
                         </div>
-                        <div class="text-xl"> <span class="text-yellow-500">Number: </span> <%= user.number %>
+                        <div class="text-lg"> <span class="text-yellow-500">Number: </span>
+                            <%= user.number %>
                         </div>
-                        <div class="text-xl"><span class="text-yellow-500">Email: </span><%= user.email %>
+                        <div class="text-lg"><span class="text-yellow-500">Email: </span>
+                            <%= user.email %>
                         </div>
-                        <div class="text-xl"><span class="text-yellow-500">Street:  </span> <%= user.street %>
+                        <div class="text-lg"><span class="text-yellow-500">Street: </span>
+                            <%= user.street %>
                         </div>
-                        <div class="text-xl"><span class="text-yellow-500">City:  </span> <%= user.city %>
+                        <div class="text-lg"><span class="text-yellow-500">City: </span>
+                            <%= user.city %>
                         </div>
-                        <div class="text-xl"><span class="text-yellow-500">State: </span><%= user.state %>
+                        <div class="text-lg"><span class="text-yellow-500">State: </span>
+                            <%= user.state %>
                         </div>
-                        <div class="text-xl"><span class="text-yellow-500">Country: </span> <%= user.country %>
+                        <div class="text-lg"><span class="text-yellow-500">Country: </span>
+                            <%= user.country %>
                         </div>
-                        <div class="text-xl"><span class="text-yellow-500">Login: </span> <%= user.login %>
+                        <div class="text-lg"><span class="text-yellow-500">Login: </span>
+                            <%= user.login %>
                         </div>
-                        <div class="text-xl"><span class="text-yellow-500">Password:  </span> <%= user.password %>
+                        <div class="text-lg"><span class="text-yellow-500">Password: </span>
+                            <%= user.password %>
                         </div>
                     </div>
-                    <div class="mt-[1vw] ml-[13vw]">
-                        <a href="/delete/<%= user._id %>" class="text-xl text-red-500">Delete User</a>
+                    <div class="mt-[1vw] ml-[10vw]">
+                        <a href="/delete/<%= user._id %>" class="text-lg  text-red-500">Delete User</a>
                     </div>
                 </div>
                 <% }) %>
