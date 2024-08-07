@@ -13,6 +13,8 @@
     }
 
     .error-message {
+         white-space: nowrap;
+          text-overflow: ellipsis;
       color: red;
       visibility: hidden;
       height: 1em;
@@ -56,8 +58,11 @@
           type="text" placeholder="State" name="state">
         <input class="px-4 py-2 w-[19vw] text-lg rounded-md outline-none border-2 border-zinc-800 bg-transparent"
           type="text" placeholder="Country" name="country">
-        <input class="px-4 py-2 w-[19vw] text-lg rounded-md outline-none border-2 border-zinc-800 bg-transparent"
-          type="text" placeholder="Login id" name="login">
+      <div class="flex flex-col text-lg w-[19vw]">
+        <input class="px-4 py-2 text-lg rounded-md outline-none border-2 border-zinc-800 bg-transparent" type="text"
+          placeholder="Login id" name="login" id="login">
+        <small class="hidden error-message text-red-500 " id="loginError">Login id must be at least 8 alphanumeric characters</small>
+      </div>
 
         <div class="flex flex-col text-lg w-[19vw]">
           <input class="px-4 py-2 text-lg rounded-md outline-none border-2 border-zinc-800 bg-transparent"
